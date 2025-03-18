@@ -19,20 +19,22 @@ Antes de iniciar, você precisa ter instalado:
 
 1. **Clone este repositório**:
    sh
-   git clone https://github.com/seu-usuario/desafio-casa-civil.git
+   git clone https://github.com/hudsonps34/desafio-casa-civil.git
+
+
    cd desafio-casa-civil
    
 
-2. **Inicie os containers com Docker Compose**:
+3. **Inicie os containers com Docker Compose**:
    sh
    docker-compose up --build
    
 
-3. **Acesse os serviços**:
+4. **Acesse os serviços**:
    - **API:** [http://localhost:5000/docs](http://localhost:5000/docs)  
    - **Frontend:** [http://localhost:3000](http://localhost:3000)
 
-4. **Parar os containers** (quando quiser encerrar):
+5. **Parar os containers** (quando quiser encerrar):
    sh
    docker-compose down
    `
