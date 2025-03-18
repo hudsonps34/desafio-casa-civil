@@ -1,49 +1,54 @@
-#  Desafio Casa Civil - Sistema de Agendas
+# 📌 Desafio Casa Civil - Sistema de Agendas
 
 Este projeto é um sistema de gerenciamento de agendas, utilizando **FastAPI** no backend e **React** no frontend, rodando dentro de containers **Docker**.
 
-##  Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
 - **Backend:** FastAPI + SQLAlchemy + PostgreSQL
 - **Frontend:** React + Material-UI
 - **Containers:** Docker + Docker Compose
 
-##  Pré-requisitos
+## 🛠 Pré-requisitos
 
 Antes de iniciar, você precisa ter instalado:
 
 - [Docker](https://www.docker.com/get-started)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
-##  Como Rodar o Projeto com Docker
+## 🚀 Como Rodar o Projeto com Docker
 
-1. **Clone este repositório**:
-   sh
+1. **Abra o Prompt de Comando (cmd) no Windows**  
+   - Pressione `Win + R`, digite `cmd` e pressione **Enter**.
+
+2. **Clone este repositório**:
+   ```sh
    git clone https://github.com/hudsonps34/desafio-casa-civil.git
+   ```
 
-
+3. **Acesse a pasta do projeto**:
+   ```sh
    cd desafio-casa-civil
-   
+   ```
 
-3. **Inicie os containers com Docker Compose**:
-   sh
+4. **Inicie os containers com Docker Compose**:
+   ```sh
    docker-compose up --build
-   
+   ```
 
-4. **Acesse os serviços**:
+5. **Acesse os serviços**:
    - **API:** [http://localhost:5000/docs](http://localhost:5000/docs)  
    - **Frontend:** [http://localhost:3000](http://localhost:3000)
 
-5. **Parar os containers** (quando quiser encerrar):
-   sh
+6. **Parar os containers** (quando quiser encerrar):
+   ```sh
    docker-compose down
-   `
+   ```
 
 ---
 
-##  Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
-
+```
 /agendas-api          # Código da API (FastAPI)
   Dockerfile          # Configuração do backend no Docker
   requirements.txt    # Dependências do Python
@@ -55,11 +60,11 @@ Antes de iniciar, você precisa ter instalado:
 
 docker-compose.yml    # Configuração dos containers
 README.md             # Documentação do projeto
-
+```
 
 ---
 
-## Funcionalidades Implementadas
+## ✨ Funcionalidades Implementadas
 
 ✔ Criar, editar e excluir agendas  
 ✔ Listagem das agendas em uma interface web  
@@ -68,15 +73,16 @@ README.md             # Documentação do projeto
 
 ---
 
-##  Melhorias Futuras
+## 🛠 Melhorias Futuras
 
 - Implementação de login/autenticação
 - Notificações por e-mail para eventos
 
 ---
 
-##  Autor
+## 👨‍💻 Autor
 
 Desenvolvido por **Hudson Souza**  
- E-mail: hudson.ps@gmail.com  
- GitHub: [seu-usuario](https://github.com/seu-usuario)
+📩 E-mail: hudson.ps@gmail.com  
+📚 GitHub: [hudsonps34](https://github.com/hudsonps34)
+
