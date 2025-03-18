@@ -1,0 +1,26 @@
+[
+  {
+    "titulo": "Reunião de Equipe",
+    "descricao": "Discussão sobre o planejamento do próximo trimestre.",
+    "dataInicio": "2025-03-17T09:00",
+    "dataFim": "2025-03-17T10:00",
+    "local": "Ministério",
+    "estadoAtualAgenda": "RECEBIDO"
+  },
+  {
+    "titulo": "Treinamento de Segurança",
+    "descricao": "Treinamento obrigatório sobre segurança no trabalho.",
+    "dataInicio": "2025-04-05T14:00",
+    "dataFim": "2025-04-05T16:00",
+    "local": "Sala 102 - Prédio Administrativo",
+    "estadoAtualAgenda": "CONFIRMADO"
+  },
+  {
+    "titulo": "Revisão de Projetos",
+    "descricao": "Revisão dos projetos em andamento para ajustes de prazo.",
+    "dataInicio": "2025-05-10T10:00",
+    "dataFim": "2025-05-10T12:00",
+    "local": "Auditório Central",
+    "estadoAtualAgenda": "ATENDIDO"
+  }
+]

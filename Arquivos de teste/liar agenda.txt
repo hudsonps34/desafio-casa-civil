@@ -1,0 +1,64 @@
+import React, { useEffect, useState } from "react";
+import { Button, List, ListItem, ListItemText } from "@mui/material";
+import api from "../services/api";
+
+const AgendaList = ({ onEdit }) => {
+  const [agendas, setAgendas] = useState([]);
+
+  const fetchAgendas = async () => {
+    const response = await api.listarAgendas();
+    setAgendas(response);
+  };
+
+  useEffect(() => {
+    fetchAgendas();
+  }, []);
+
+  const handleDelete = async (id) => {
+    await api.excluirAgenda(id);
+    fetchAgendas();
+  };
+
+  return (
+    <List>
+      {agendas.length === 0 ? (
+        <p style={{ textAlign: "center", fontWeight: "bold" }}>Nenhuma agenda cadastrada.</p>
+      ) : (
+        agendas.map((agenda) => (
+          <ListItem key={agenda.id} divider>
+            <ListItemText
+              primary={`📌 ${agenda.titulo}`}
+              secondary={`📅 Início: ${new Date(agenda.dataInicio).toLocaleString()} | 
+                          🏁 Fim: ${new Date(agenda.dataFim).toLocaleString()} | 
+                          📍 Local: ${agenda.local} | 
+                          🔹 Estado: ${agenda.estadoAtualAgenda}`}
+            />
+
+            {/* 🔹 Garante que o ID está vindo corretamente ao editar */}
+            <Button 
+              onClick={() => {
+                // alert(`Editando ID: ${agenda.id}`); // 🔹 Mostra um alerta para debug
+                onEdit(agenda);
+              }} 
+              variant="contained" 
+              color="primary"
+              style={{ marginRight: "10px" }}
+            >
+              Editar
+            </Button>
+            
+            <Button 
+              onClick={() => handleDelete(agenda.id)} 
+              variant="contained" 
+              color="secondary"
+            >
+              Excluir
+            </Button>
+          </ListItem>
+        ))
+      )}
+    </List>
+  );
+};
+
+export default AgendaList;

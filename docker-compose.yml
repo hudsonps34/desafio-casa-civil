@@ -1,0 +1,36 @@
+services:
+  backend:
+    build: ./agendas-api
+    container_name: agendas-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./agendas-api:/app
+    environment:
+      - DATABASE_URL=sqlite:///./dados.db
+    depends_on: 
+      - db
+
+  frontend:
+    build: ./agendas-frontend
+    container_name: agendas-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:14
+    container_name: agendas-db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: agendas
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
