@@ -86,3 +86,7 @@ Desenvolvido por **Hudson Souza**
 📩 E-mail: hudson.ps@gmail.com  
 📚 GitHub: [hudsonps34](https://github.com/hudsonps34)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 42f80af (Atualizando configurações do Docker e requirements.txt)
