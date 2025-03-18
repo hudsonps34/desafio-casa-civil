@@ -1,8 +1,8 @@
 '''Configuração da Api'''
 import os
 import json
-from pydantic import BaseModel, field_validator
 from datetime import datetime
+from pydantic import BaseModel, field_validator
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, HTTPException, File, UploadFile, Query
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, MetaData, Table
